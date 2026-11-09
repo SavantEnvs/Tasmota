@@ -1,0 +1,10 @@
+project: savantenvs/Tasmota
+target: berry_json
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/berry_json/testsuite
+cmds:
+  - cmd: /mayhem/berry_json
+    libfuzzer: true
+    timeout: 30
+    dictionary: /mayhem/mayhem/berry_json/berry_json.dict

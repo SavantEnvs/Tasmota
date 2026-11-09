@@ -1,0 +1,9 @@
+project: savantenvs/Tasmota
+target: berry_bytecode
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/berry_bytecode/testsuite
+cmds:
+  - cmd: /mayhem/berry_bytecode
+    libfuzzer: true
+    timeout: 30

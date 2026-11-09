@@ -1,0 +1,10 @@
+project: savantenvs/Tasmota
+target: berry_script
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/berry_script/testsuite
+cmds:
+  - cmd: /mayhem/berry_script
+    libfuzzer: true
+    timeout: 30
+    dictionary: /mayhem/mayhem/berry_script/berry_script.dict

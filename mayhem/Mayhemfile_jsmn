@@ -1,0 +1,10 @@
+project: savantenvs/Tasmota
+target: jsmn
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/jsmn/testsuite
+cmds:
+  - cmd: /mayhem/jsmn
+    libfuzzer: true
+    timeout: 30
+    dictionary: /mayhem/mayhem/jsmn/jsmn.dict

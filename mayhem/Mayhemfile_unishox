@@ -1,0 +1,9 @@
+project: savantenvs/Tasmota
+target: unishox
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/unishox/testsuite
+cmds:
+  - cmd: /mayhem/unishox
+    libfuzzer: true
+    timeout: 30
