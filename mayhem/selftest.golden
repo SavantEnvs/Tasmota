@@ -1,0 +1,12 @@
+cron '0 0 12 * * *' next=1700049600 prev=1699963200
+cron '*/15 * * * * *' next=1700000010 prev=1699999995
+cron '0 30 8 1 * *' next=1701419400 prev=1698827400
+cron '0 0 0 * * MON-FRI' next=1700006400 prev=1699920000
+cron 'bogus' error
+cron '61 * * * * *' error
+jsmn n=9 types=1,2;3,1;2,4;4,0;4,0;4,0;4,0;3,1;3,0;
+jsmn n=-3 types=
+jsmn n=3 types=1,1;3,1;3,0;
+unishox len=9 hex=214c20b110fe7c210d back=Hello World
+unishox len=25 hex=155433c799d87655f86e559d07b6850b1c74dc3b04c0fc761b back=https://tasmota.github.io/docs/
+unishox len=18 hex=3da7b0861610f932f9ec3ccf616171ec3dc6 back={"POWER":"ON"}
